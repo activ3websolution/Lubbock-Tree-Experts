@@ -2,7 +2,6 @@
 import { Metadata } from 'next';
 import Hero from "@/components/home/Hero";
 import Trust from "@/components/home/Trust";
-import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import LocalSeo from "@/components/home/LocalSeo";
 import Reviews from "@/components/home/Reviews";
@@ -19,7 +18,6 @@ export default function Home() {
     <main>
       <Hero />
       <Trust />
-      <Services />
       <WhyChooseUs />
       <LocalSeo />
       <Reviews />

@@ -6,7 +6,6 @@ const services = [
   { name: 'Tree Removal', path: '/tree-removal', description: 'Safe and efficient removal of unwanted or hazardous trees.' },
   { name: 'Tree Trimming', path: '/tree-trimming', description: 'Professional trimming and pruning to improve tree health and appearance.' },
   { name: 'Stump Grinding', path: '/stump-grinding', description: 'Complete stump removal to reclaim your yard.' },
-  { name: 'Emergency Tree Service', path: '/emergency-tree-service', description: '24/7 response for storm-damaged or fallen trees.' },
   { name: 'Storm Damage Cleanup', path: '/storm-cleanup', description: 'Fast and thorough cleanup after a storm.' },
   { name: 'Land & Brush Clearing', path: '/land-clearing', description: 'Clearing lots and land of trees, brush, and debris.' },
 ];

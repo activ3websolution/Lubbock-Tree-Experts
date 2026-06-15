@@ -59,7 +59,6 @@ const CityPage = ({ params }: { params: { city: string } }) => {
   const city = cityData[params.city as keyof typeof cityData];
 
   if (!city) {
-    // Handle case where city data is not found
     return <div>City not found</div>;
   }
 
@@ -72,19 +71,62 @@ const CityPage = ({ params }: { params: { city: string } }) => {
   return (
     <>
       <SchemaMarkup breadcrumbs={breadcrumbs} />
-      <div className="container mx-auto px-4 py-12">
-        <article className="prose lg:prose-xl mx-auto">
-          <h1>Tree Services in {city.name}, TX</h1>
-          <p>{city.content}</p>
+      {/* Hero Section */}
+      <div className="bg-gray-50">
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-brand-green">Expert Tree Services in {city.name}, TX</h1>
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Your trusted, local tree care partner serving the {city.name} community.</p>
+        </div>
+      </div>
 
-          <div className="bg-brand-orange text-white p-8 rounded-lg my-12 text-center">
-            <h2 className="!text-white">Your Local {city.name} Tree Experts</h2>
-            <p className="text-lg">Contact us today for a free estimate on any of our tree services in the {city.name} area.</p>
-            <a href="/contact" className="bg-white text-brand-green px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-200 transition-colors mt-4 inline-block">
-              Request a Free Quote
-            </a>
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            <div className="text-lg text-gray-700 space-y-6">
+              <h2 className="text-3xl font-bold text-brand-green">Local Expertise in {city.name}</h2>
+              <p>{city.content}</p>
+              
+              <h3 className="text-2xl font-bold text-brand-green pt-8">Our Services in {city.name}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-orange">
+                  <h4 className="font-bold text-xl text-brand-green">Tree Removal</h4>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-orange">
+                  <h4 className="font-bold text-xl text-brand-green">Tree Trimming</h4>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-orange">
+                  <h4 className="font-bold text-xl text-brand-green">Stump Grinding</h4>
+                </div>
+                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-orange">
+                  <h4 className="font-bold text-xl text-brand-green">Storm Cleanup</h4>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
+
+          {/* Sidebar */}
+          <aside>
+            <div className="bg-green-50 p-6 rounded-lg shadow-md border-l-4 border-brand-green">
+              <h3 className="text-2xl font-bold text-brand-green mb-4">Why Choose Us in {city.name}?</h3>
+              <ul className="space-y-4 text-gray-700">
+                <li className="font-semibold">Local {city.name} Knowledge</li>
+                <li className="font-semibold">Safety-First Approach</li>
+                <li className="font-semibold">Free, No-Obligation Estimates</li>
+                <li className="font-semibold">Fully Licensed & Insured</li>
+                <li className="font-semibold">100% Satisfaction Guarantee</li>
+              </ul>
+            </div>
+            
+            <div className="bg-brand-orange text-white p-8 rounded-lg my-8 text-center shadow-lg">
+              <h3 className="text-2xl font-bold text-white">Get a Free Estimate in {city.name}</h3>
+              <p className="mt-2">Contact us today for a free estimate on any of our tree services in the {city.name} area.</p>
+              <a href="/contact" className="bg-white text-brand-green px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-200 transition-colors mt-4 inline-block">
+                Request a Quote
+              </a>
+            </div>
+          </aside>
+        </div>
       </div>
     </>
   );
