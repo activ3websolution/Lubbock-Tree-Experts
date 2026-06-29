@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Lubbock Tree Experts</h1>
+            <h1 class="logo">Lubbock Tree Experts</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,17 +23,19 @@
     </header>
 
     <main>
-        <section class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch for a free estimate!</p>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br><br>
-                <input type="submit" value="Submit">
+        <section class="container content-section">
+            <h2 class="section-title">Get a Free Estimate</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">Fill out the form below and we'll get back to you shortly. For immediate assistance, please call us.</p>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                 <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="btn">Get My Free Estimate</button>
             </form>
         </section>
     </main>
